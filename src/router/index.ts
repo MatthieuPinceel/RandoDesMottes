@@ -1,9 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Accueil from '../pages/Accueil.vue'
 import EditionPassee from '../pages/EditionPassee.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  // Hash history : GitHub Pages ne gère pas les redirections serveur,
+  // donc les URLs du type /edition/2025 retourneraient 404.
+  // Avec le hash, les URLs deviennent /#/edition/2025 et ça fonctionne partout.
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
