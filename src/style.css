@@ -1,0 +1,78 @@
+/* ============================================================
+   STYLES GLOBAUX — La Rando des Mottes
+   ============================================================ */
+
+:root {
+  --vert:         #112a1b;
+  --vert-moyen:   #1e4a2c;
+  --ambre:        #c07b2a;
+  --ambre-clair:  #e8dcc8;
+  --fond:         #f4f1eb;
+  --fond-section: #edeae2;
+  --blanc:        #ffffff;
+  --texte:        #181410;
+  --texte-doux:   #5a5048;
+
+  --facile:       #3a8c4a;
+  --moyen:        #c07b2a;
+  --difficile:    #b53020;
+
+  --hauteur-header: 64px;
+  --rayon:          4px;
+  --max-width:      1080px;
+
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--texte);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+
+.conteneur {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.badge-activite {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blanc);
+}
+.badge-activite.marche { background: #2d7a3a; }
+.badge-activite.velo   { background: #1a6ab0; }
+.badge-activite.moto   { background: #c0392b; }
+
+@media (max-width: 640px) {
+  .conteneur { padding: 0 1.25rem; }
+}
