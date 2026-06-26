@@ -1,0 +1,95 @@
+{
+  "annee": 2025,
+  "date": "Dimanche 18 mai 2025",
+  "lieuDepart": "Lederzeele (Nord, 59)",
+  "active": false,
+  "photo": "",
+  "presentation": "La 3ᵉ édition s'est tenue sous un ciel gris typiquement flamand, mais avec une chaleur humaine qui n'avait rien à envier au soleil. Plus de 320 participants avaient fait le déplacement à Lederzeele pour arpenter les chemins de crête du mont des Cats ou longer les prairies du Houtland à vélo. Une belle réussite malgré quelques averses en fin de matinée.",
+  "parcours": [
+    {
+      "nom": "Sentier du Houtland",
+      "distance": 11,
+      "type": "marche",
+      "couleur": "#2d7a3a",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.8545, "lng": 2.539  },
+        { "lat": 50.8575, "lng": 2.531  },
+        { "lat": 50.86,   "lng": 2.525  },
+        { "lat": 50.858,  "lng": 2.518  },
+        { "lat": 50.854,  "lng": 2.522  },
+        { "lat": 50.851,  "lng": 2.531  },
+        { "lat": 50.8495, "lng": 2.54   },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Tour du mont des Cats",
+      "distance": 44,
+      "type": "velo",
+      "couleur": "#1a6ab0",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.842,  "lng": 2.535  },
+        { "lat": 50.83,   "lng": 2.52   },
+        { "lat": 50.82,   "lng": 2.53   },
+        { "lat": 50.815,  "lng": 2.55   },
+        { "lat": 50.81,   "lng": 2.57   },
+        { "lat": 50.805,  "lng": 2.59   },
+        { "lat": 50.8,    "lng": 2.61   },
+        { "lat": 50.81,   "lng": 2.625  },
+        { "lat": 50.825,  "lng": 2.62   },
+        { "lat": 50.84,   "lng": 2.605  },
+        { "lat": 50.85,   "lng": 2.58   },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Boucle des Monts de Flandre",
+      "distance": 85,
+      "type": "moto",
+      "couleur": "#c0392b",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.83,   "lng": 2.52   },
+        { "lat": 50.81,   "lng": 2.49   },
+        { "lat": 50.795,  "lng": 2.47   },
+        { "lat": 50.78,   "lng": 2.49   },
+        { "lat": 50.77,   "lng": 2.52   },
+        { "lat": 50.775,  "lng": 2.56   },
+        { "lat": 50.785,  "lng": 2.59   },
+        { "lat": 50.8,    "lng": 2.62   },
+        { "lat": 50.82,   "lng": 2.63   },
+        { "lat": 50.84,   "lng": 2.61   },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "nom": "Café & accueil",
+      "horaire": "08h00 – 09h00",
+      "description": "Accueil des participants, vérification des inscriptions."
+    },
+    {
+      "nom": "Départs échelonnés",
+      "horaire": "09h00 – 09h30",
+      "description": "Marche à 09h00, vélo à 09h15, moto à 09h30."
+    },
+    {
+      "nom": "Ravitaillement mi-parcours",
+      "horaire": "11h00 – 13h00",
+      "description": "Pain, fromage de Bergues, eau et sodas. Pour toutes les activités."
+    },
+    {
+      "nom": "Déjeuner partagé",
+      "horaire": "12h30 – 15h00",
+      "description": "Carbonnade flamande, frites, gaufres de Lille pour le dessert."
+    },
+    {
+      "nom": "Tombola & remise des souvenirs",
+      "horaire": "14h30",
+      "description": "Tirage au sort et remise des plaques commémoratives aux finishers."
+    }
+  ]
+}

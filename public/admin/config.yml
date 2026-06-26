@@ -1,0 +1,143 @@
+# ============================================================
+# CONFIGURATION DECAP CMS — La Rando des Mottes
+#
+# AVANT DE COMMENCER : créez une GitHub OAuth App sur
+# https://github.com/settings/developers
+#   - Homepage URL       : https://matthieupinceel.github.io/RandoDesMottes/
+#   - Callback URL       : https://matthieupinceel.github.io/RandoDesMottes/
+# Puis remplacez VOTRE_CLIENT_ID ci-dessous par le Client ID obtenu.
+# ============================================================
+
+backend:
+  name: github
+  repo: MatthieuPinceel/RandoDesMottes
+  branch: main
+  auth_type: pkce
+  app_id: VOTRE_CLIENT_ID
+
+site_url: https://matthieupinceel.github.io/RandoDesMottes/
+
+# Dossier où les photos uploadées sont enregistrées dans le repo
+media_folder: "public/images"
+# Chemin public des photos sur le site déployé
+public_folder: "/RandoDesMottes/images"
+
+locale: fr
+
+collections:
+  - name: editions
+    label: Éditions
+    label_singular: Édition
+    folder: src/data/editions
+    create: true
+    slug: "{{annee}}"
+    format: json
+    summary: "{{annee}} — {{date}} — {{lieuDepart}}"
+    fields:
+
+      - label: Année
+        name: annee
+        widget: number
+        value_type: int
+        hint: "Ex : 2027"
+
+      - label: Date de l'événement
+        name: date
+        widget: string
+        hint: "Ex : Dimanche 17 mai 2027"
+
+      - label: Lieu de départ
+        name: lieuDepart
+        widget: string
+        hint: "Ex : Lederzeele (Nord, 59)"
+
+      - label: Édition en cours (à venir)
+        name: active
+        widget: boolean
+        default: false
+        hint: "Cocher uniquement pour l'édition de l'année en cours. Décocher les autres."
+
+      - label: Photo de couverture
+        name: photo
+        widget: image
+        required: false
+        hint: "Photo affichée en arrière-plan du bandeau. Formats JPG ou PNG recommandés."
+
+      - label: Texte de présentation
+        name: presentation
+        widget: text
+        hint: "Court paragraphe affiché en haut de la page de l'édition."
+
+      - label: Parcours
+        name: parcours
+        widget: list
+        label_singular: Parcours
+        hint: "Ajoutez un parcours par activité (marche, vélo ou moto)."
+        fields:
+
+          - label: Nom du parcours
+            name: nom
+            widget: string
+            hint: "Ex : Chemin des Watergangs"
+
+          - label: Distance (km)
+            name: distance
+            widget: number
+            value_type: int
+            hint: "Distance totale en kilomètres"
+
+          - label: Type d'activité
+            name: type
+            widget: select
+            options:
+              - { label: "🚶 Marche", value: marche }
+              - { label: "🚴 Vélo",   value: velo   }
+              - { label: "🏍️ Moto",   value: moto   }
+
+          - label: Couleur sur la carte
+            name: couleur
+            widget: color
+            default: "#2d7a3a"
+            hint: "Couleur du tracé affiché sur la carte interactive."
+
+          - label: Tracé GPS
+            name: trace
+            widget: list
+            label_singular: Point GPS
+            hint: >
+              Liste de points qui forment le tracé sur la carte.
+              Utilisez https://geojson.io pour dessiner votre parcours
+              et relevez les coordonnées latitude/longitude de chaque point.
+            fields:
+              - label: Latitude
+                name: lat
+                widget: number
+                value_type: float
+                hint: "Ex : 50.8508 (nord de la France)"
+              - label: Longitude
+                name: lng
+                widget: number
+                value_type: float
+                hint: "Ex : 2.5472 (nord de la France)"
+
+      - label: Programme des animations
+        name: animations
+        widget: list
+        label_singular: Animation
+        hint: "Ajoutez les activités, ravitaillements et animations de la journée."
+        fields:
+
+          - label: Nom
+            name: nom
+            widget: string
+            hint: "Ex : Repas flamand"
+
+          - label: Horaire
+            name: horaire
+            widget: string
+            hint: "Ex : 12h00 – 14h30"
+
+          - label: Description
+            name: description
+            widget: text
+            hint: "Quelques mots pour décrire cette animation."

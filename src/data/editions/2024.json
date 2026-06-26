@@ -1,0 +1,67 @@
+{
+  "annee": 2024,
+  "date": "Dimanche 19 mai 2024",
+  "lieuDepart": "Lederzeele (Nord, 59)",
+  "active": false,
+  "photo": "",
+  "presentation": "Deuxième édition avec deux nouveautés : l'ajout d'un parcours moto et un ravitaillement au fromage de Bergues sponsorisé par la fromagerie locale. 250 participants sur les trois activités, une météo clémente et une organisation qui montait en puissance. Les traces des cyclistes ont traversé pour la première fois les pavés du Steenvoorde.",
+  "parcours": [
+    {
+      "nom": "Boucle des estaminets",
+      "distance": 8,
+      "type": "marche",
+      "couleur": "#2d7a3a",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.8535, "lng": 2.553  },
+        { "lat": 50.856,  "lng": 2.557  },
+        { "lat": 50.8575, "lng": 2.551  },
+        { "lat": 50.8555, "lng": 2.545  },
+        { "lat": 50.8525, "lng": 2.541  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Circuit des Flandres pavées",
+      "distance": 52,
+      "type": "velo",
+      "couleur": "#1a6ab0",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.842,  "lng": 2.56   },
+        { "lat": 50.835,  "lng": 2.575  },
+        { "lat": 50.828,  "lng": 2.59   },
+        { "lat": 50.82,   "lng": 2.605  },
+        { "lat": 50.815,  "lng": 2.62   },
+        { "lat": 50.81,   "lng": 2.61   },
+        { "lat": 50.818,  "lng": 2.59   },
+        { "lat": 50.828,  "lng": 2.57   },
+        { "lat": 50.838,  "lng": 2.555  },
+        { "lat": 50.845,  "lng": 2.549  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "nom": "Accueil café",
+      "horaire": "08h30 – 09h00",
+      "description": "Café et pain d'épices à la salle des fêtes."
+    },
+    {
+      "nom": "Départs",
+      "horaire": "09h00 – 09h30",
+      "description": "Marche à 09h00 depuis la place, vélo à 09h30 depuis le parking."
+    },
+    {
+      "nom": "Stand fromage de Bergues",
+      "horaire": "11h00 – 14h00",
+      "description": "Dégustation et vente du fameux fromage au cumin, producteur local."
+    },
+    {
+      "nom": "Repas & animations",
+      "horaire": "12h00 – 15h00",
+      "description": "Buffet flamand et animations pour les enfants dans la cour de l'école."
+    }
+  ]
+}

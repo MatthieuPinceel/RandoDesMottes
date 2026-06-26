@@ -1,0 +1,109 @@
+{
+  "annee": 2026,
+  "date": "Dimanche 17 mai 2026",
+  "lieuDepart": "Lederzeele (Nord, 59)",
+  "active": true,
+  "photo": "",
+  "presentation": "Pour cette 4ᵉ édition, La Rando des Mottes vous donne rendez-vous au cœur de la plaine flamande. Trois départs, trois ambiances : à pied pour flâner dans les chemins de traverse entre watergangs et moulins, à vélo pour parcourir les routes pavées du pays de Cassel, et en moto pour une grande boucle à travers les Flandres jusqu'aux portes de Bergues.",
+  "parcours": [
+    {
+      "nom": "Chemin des Watergangs",
+      "distance": 9,
+      "type": "marche",
+      "couleur": "#2d7a3a",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.853,  "lng": 2.554  },
+        { "lat": 50.8562, "lng": 2.5605 },
+        { "lat": 50.859,  "lng": 2.558  },
+        { "lat": 50.8608, "lng": 2.552  },
+        { "lat": 50.859,  "lng": 2.5455 },
+        { "lat": 50.856,  "lng": 2.54   },
+        { "lat": 50.853,  "lng": 2.542  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Circuit du pays de Cassel",
+      "distance": 38,
+      "type": "velo",
+      "couleur": "#1a6ab0",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.845,  "lng": 2.538  },
+        { "lat": 50.835,  "lng": 2.526  },
+        { "lat": 50.822,  "lng": 2.51   },
+        { "lat": 50.809,  "lng": 2.498  },
+        { "lat": 50.8,    "lng": 2.49   },
+        { "lat": 50.798,  "lng": 2.502  },
+        { "lat": 50.806,  "lng": 2.52   },
+        { "lat": 50.817,  "lng": 2.535  },
+        { "lat": 50.828,  "lng": 2.548  },
+        { "lat": 50.838,  "lng": 2.556  },
+        { "lat": 50.845,  "lng": 2.553  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Grande Boucle des Flandres",
+      "distance": 110,
+      "type": "moto",
+      "couleur": "#c0392b",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.87,   "lng": 2.56   },
+        { "lat": 50.89,   "lng": 2.58   },
+        { "lat": 50.91,   "lng": 2.57   },
+        { "lat": 50.94,   "lng": 2.52   },
+        { "lat": 50.97,   "lng": 2.44   },
+        { "lat": 51.01,   "lng": 2.38   },
+        { "lat": 51.03,   "lng": 2.34   },
+        { "lat": 51.02,   "lng": 2.3    },
+        { "lat": 50.99,   "lng": 2.28   },
+        { "lat": 50.96,   "lng": 2.3    },
+        { "lat": 50.92,   "lng": 2.35   },
+        { "lat": 50.89,   "lng": 2.4    },
+        { "lat": 50.87,   "lng": 2.44   },
+        { "lat": 50.855,  "lng": 2.49   },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "nom": "Accueil & café flamand",
+      "horaire": "07h30 – 09h00",
+      "description": "Café, tartines et spéculoos offerts par l'association pour bien démarrer."
+    },
+    {
+      "nom": "Départ des marcheurs",
+      "horaire": "09h00",
+      "description": "Coup d'envoi depuis la place du bourg, remise des plans de parcours."
+    },
+    {
+      "nom": "Départ des cyclistes",
+      "horaire": "09h15",
+      "description": "Départ groupé des vélos depuis la salle des fêtes."
+    },
+    {
+      "nom": "Départ des motards",
+      "horaire": "09h30",
+      "description": "Départ en convoi encadré par les bénévoles moto."
+    },
+    {
+      "nom": "Ravitaillement km 4",
+      "horaire": "10h30 – 12h30",
+      "description": "Point d'eau, fruits, pain d'épices. Réservé aux marcheurs."
+    },
+    {
+      "nom": "Repas flamand",
+      "horaire": "12h00 – 14h30",
+      "description": "Potjevleesch, frites et bière Ch'ti pour tout le monde sous chapiteau."
+    },
+    {
+      "nom": "Concert de la Fanfare de Wormhout",
+      "horaire": "13h30 – 15h30",
+      "description": "Animation musicale en plein air, entrée libre."
+    }
+  ]
+}

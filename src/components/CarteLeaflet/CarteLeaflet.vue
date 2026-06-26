@@ -11,13 +11,17 @@ let carteInstance: L.Map | null = null
 onMounted(() => {
   if (!carteRef.value) return
 
+  // Conversion {lat,lng}[] → [lat,lng][] pour Leaflet
+  const toLatLng = (trace: typeof props.parcours[0]['trace']): [number, number][] =>
+    trace.map((c) => [c.lat, c.lng])
+
   const toutesCoords = props.parcours.flatMap((p) => p.trace)
-  const centreDefaut: [number, number] = [46.721, -0.924]
+  const centreDefaut: [number, number] = [50.8508, 2.5472]
   const centre: [number, number] =
     toutesCoords.length > 0
       ? [
-          toutesCoords.reduce((s, c) => s + c[0], 0) / toutesCoords.length,
-          toutesCoords.reduce((s, c) => s + c[1], 0) / toutesCoords.length,
+          toutesCoords.reduce((s, c) => s + c.lat, 0) / toutesCoords.length,
+          toutesCoords.reduce((s, c) => s + c.lng, 0) / toutesCoords.length,
         ]
       : centreDefaut
 
@@ -31,7 +35,9 @@ onMounted(() => {
   props.parcours.forEach((parcours) => {
     if (parcours.trace.length < 2) return
 
-    L.polyline(parcours.trace, {
+    const coords = toLatLng(parcours.trace)
+
+    L.polyline(coords, {
       color: parcours.couleur,
       weight: 4,
       opacity: 0.9,
@@ -39,7 +45,7 @@ onMounted(() => {
       .bindPopup(`<strong>${parcours.nom}</strong><br>${parcours.distance} km · ${parcours.type}`)
       .addTo(carteInstance!)
 
-    L.circleMarker(parcours.trace[0], {
+    L.circleMarker(coords[0], {
       radius: 6,
       color: '#fff',
       fillColor: parcours.couleur,
@@ -50,7 +56,7 @@ onMounted(() => {
       .addTo(carteInstance!)
   })
 
-  const bounds = L.featureGroup(props.parcours.map((p) => L.polyline(p.trace))).getBounds()
+  const bounds = L.featureGroup(props.parcours.map((p) => L.polyline(toLatLng(p.trace)))).getBounds()
   if (bounds.isValid()) carteInstance.fitBounds(bounds, { padding: [32, 32] })
 })
 

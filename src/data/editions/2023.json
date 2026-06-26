@@ -1,0 +1,67 @@
+{
+  "annee": 2023,
+  "date": "Dimanche 21 mai 2023",
+  "lieuDepart": "Lederzeele (Nord, 59)",
+  "active": false,
+  "photo": "",
+  "presentation": "La toute première édition de La Rando des Mottes ! Née d'une poignée de passionnés du bourg, cette journée a rassemblé 140 participants pour deux parcours inauguraux — une marche dans les chemins creux et une sortie vélo vers Cassel. L'ambiance était au rendez-vous, et la promesse d'une belle tradition annuelle était déjà dans l'air.",
+  "parcours": [
+    {
+      "nom": "Chemin des fondateurs",
+      "distance": 7,
+      "type": "marche",
+      "couleur": "#2d7a3a",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.8528, "lng": 2.543  },
+        { "lat": 50.855,  "lng": 2.539  },
+        { "lat": 50.857,  "lng": 2.544  },
+        { "lat": 50.8555, "lng": 2.551  },
+        { "lat": 50.853,  "lng": 2.552  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    },
+    {
+      "nom": "Route vers Cassel",
+      "distance": 29,
+      "type": "velo",
+      "couleur": "#1a6ab0",
+      "trace": [
+        { "lat": 50.8508, "lng": 2.5472 },
+        { "lat": 50.84,   "lng": 2.535  },
+        { "lat": 50.828,  "lng": 2.52   },
+        { "lat": 50.815,  "lng": 2.51   },
+        { "lat": 50.805,  "lng": 2.5    },
+        { "lat": 50.799,  "lng": 2.49   },
+        { "lat": 50.798,  "lng": 2.498  },
+        { "lat": 50.808,  "lng": 2.515  },
+        { "lat": 50.82,   "lng": 2.53   },
+        { "lat": 50.835,  "lng": 2.543  },
+        { "lat": 50.845,  "lng": 2.548  },
+        { "lat": 50.8508, "lng": 2.5472 }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "nom": "Inauguration",
+      "horaire": "09h00",
+      "description": "Discours de lancement par les fondateurs, sous les tilleuls de la place."
+    },
+    {
+      "nom": "Départs",
+      "horaire": "09h30",
+      "description": "Premier départ de l'histoire de La Rando des Mottes."
+    },
+    {
+      "nom": "Repas inaugural",
+      "horaire": "12h30 – 15h00",
+      "description": "Chacun apportait son plat : une grande tablée de 140 couverts sur la place."
+    },
+    {
+      "nom": "Moules-frites de clôture",
+      "horaire": "15h00",
+      "description": "Moules du Nord et frites pour clore cette première édition mémorable."
+    }
+  ]
+}

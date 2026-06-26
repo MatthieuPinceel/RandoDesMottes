@@ -9,6 +9,12 @@ const props = defineProps<{
 
 <template>
   <section class="bandeau" :class="{ 'bandeau--passee': props.passee }">
+
+    <!-- Photo de couverture optionnelle (ajoutée via le CMS) -->
+    <div v-if="props.edition.photo" class="bandeau__photo">
+      <img :src="props.edition.photo" :alt="`Édition ${props.edition.annee}`" />
+    </div>
+
     <div class="bandeau__interieur conteneur">
 
       <div class="bandeau__meta">
@@ -35,9 +41,11 @@ const props = defineProps<{
 
 <style scoped>
 .bandeau {
+  position: relative;
   background: var(--vert-moyen);
   padding: 3.5rem 0 3rem;
   border-bottom: 3px solid var(--ambre);
+  overflow: hidden;
 }
 
 .bandeau--passee {
@@ -45,7 +53,23 @@ const props = defineProps<{
   border-bottom-color: #7a5c38;
 }
 
+/* Photo en arrière-plan avec overlay sombre */
+.bandeau__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.bandeau__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.35;
+}
+
 .bandeau__interieur {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -72,8 +96,8 @@ const props = defineProps<{
 
 .bandeau__tag-passee {
   background: rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .bandeau__titre {
@@ -101,7 +125,7 @@ const props = defineProps<{
 }
 
 .bandeau__info-date {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
   font-weight: 600;
 }
 
