@@ -1,26 +1,13 @@
-# ============================================================
-# CONFIGURATION DECAP CMS — La Rando des Mottes
-#
-# AVANT DE COMMENCER : créez une GitHub OAuth App sur
-# https://github.com/settings/developers
-#   - Homepage URL       : https://matthieupinceel.github.io/RandoDesMottes/
-#   - Callback URL       : https://matthieupinceel.github.io/RandoDesMottes/
-# Puis remplacez VOTRE_CLIENT_ID ci-dessous par le Client ID obtenu.
-# ============================================================
-
+# Backend Netlify Identity + Git Gateway
+# Aucune config OAuth à faire ici : Netlify gère tout.
 backend:
-  name: github
-  repo: MatthieuPinceel/RandoDesMottes
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23litYenBqnJVcxsAD
-
-site_url: https://matthieupinceel.github.io/RandoDesMottes/
 
 # Dossier où les photos uploadées sont enregistrées dans le repo
 media_folder: "public/images"
 # Chemin public des photos sur le site déployé
-public_folder: "/RandoDesMottes/images"
+public_folder: "/images"
 
 locale: fr
 
